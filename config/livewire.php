@@ -55,7 +55,7 @@ return [
     */
 
     //'asset_url' => 'http://localhost/grose/public',
-	'asset_url' => 'http://192.168.0.37/grose_system/public',
+	'asset_url' => 'http://127.0.0.1:8000',
 
     /*
     |--------------------------------------------------------------------------
