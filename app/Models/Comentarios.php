@@ -10,6 +10,6 @@ class Comentarios extends Model
     // Incluir el trait SoftDeletes en tu modelo
     use SoftDeletes;
     protected $table = 'comentarios';
-    protected $fillable = ['herr', 'codigo', 'comentario', 'fecha','origen', 'status'];
+    protected $fillable = ['herr', 'codigo', 'comentario', 'fecha','origen', 'cantidad','status'];
 }
 

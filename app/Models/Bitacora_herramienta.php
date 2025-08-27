@@ -17,6 +17,7 @@ class bitacora_herramienta extends Model
         'codigo', 
         'fecha', 
         'hora', 
+        'cantidad',
         'comentario', 
         'rep_fecha', 
         'id_retorno', 

@@ -105,15 +105,18 @@
                     <thead>
                         <th>Fecha</th>
                         <th>Herramienta</th>
+                        <th>Cantidad</th>
                         <th>Comentario</th>
                         <th>Accion</th>
                     </thead>
                     <tbody>
+              
                         <?php $__currentLoopData = $danada; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         
                             <tr>
                                 <td><?php echo e($row->created_at); ?></td>
                                 <td><?php echo e($this->herramientas($row->herr)); ?></td>
+                                <td><?php echo e($row->cantidad); ?></td>
                                 <td><?php echo e($row->comentario); ?></td>
                                <?php if($row->status == 1): ?>
                                 <td><button class="btn btn-danger" wire:click="accion(7,<?php echo e($row->id); ?>)"><span class="fas fa-sync-alt"></span></button></td>

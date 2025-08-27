@@ -154,7 +154,9 @@
     			<td><b>Herramienta</b></td>
     			<td>{{$nh}}</td>
     		</tr>
-    		<tr>
+    		<td><b>Cantidad</b></td>
+            <td>{{$cantidad1}}</td>
+            <tr>
     			<td><b>Comentario</b></td>
     			<td>{{$com}}</td>
     		</tr>
@@ -187,6 +189,13 @@
         <div class="form-group">
             <input type="text" class="form-control" name="cbx"  wire:model="cod_barras" wire:ignore.lazy>
             @error('cod_barras')
+            <span class="text-danger">{{ $message }}</span>
+        @enderror
+        </div>
+         <label>Cantidad a enviar</label>
+        <div class="form-group">
+            <input type="text" class="form-control" wire:model="pza" wire:ignore.lazy>
+            @error('pza')
             <span class="text-danger">{{ $message }}</span>
         @enderror
         </div>

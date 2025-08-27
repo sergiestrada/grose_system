@@ -162,7 +162,9 @@ unset($__errorArgs, $__bag); ?>
     			<td><b>Herramienta</b></td>
     			<td><?php echo e($nh); ?></td>
     		</tr>
-    		<tr>
+    		<td><b>Cantidad</b></td>
+            <td><?php echo e($cantidad1); ?></td>
+            <tr>
     			<td><b>Comentario</b></td>
     			<td><?php echo e($com); ?></td>
     		</tr>
@@ -202,6 +204,20 @@ unset($__errorArgs, $__bag); ?>
         <div class="form-group">
             <input type="text" class="form-control" name="cbx"  wire:model="cod_barras" wire:ignore.lazy>
             <?php $__errorArgs = ['cod_barras'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+            <span class="text-danger"><?php echo e($message); ?></span>
+        <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+        </div>
+         <label>Cantidad a enviar</label>
+        <div class="form-group">
+            <input type="text" class="form-control" wire:model="pza" wire:ignore.lazy>
+            <?php $__errorArgs = ['pza'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }

@@ -103,15 +103,18 @@
                     <thead>
                         <th>Fecha</th>
                         <th>Herramienta</th>
+                        <th>Cantidad</th>
                         <th>Comentario</th>
                         <th>Accion</th>
                     </thead>
                     <tbody>
+              
                         @foreach ($danada as $row)
                         
                             <tr>
                                 <td>{{$row->created_at}}</td>
                                 <td>{{ $this->herramientas($row->herr) }}</td>
+                                <td>{{$row->cantidad}}</td>
                                 <td>{{ $row->comentario }}</td>
                                @if($row->status == 1)
                                 <td><button class="btn btn-danger" wire:click="accion(7,{{$row->id}})"><span class="fas fa-sync-alt"></span></button></td>
